@@ -24,7 +24,7 @@ normal='\e[0;m'
 
 # Installation des dépendances manquantes
 
-function depends_install() {
+function lamp_install() {
 
     # Installation des dépendances manquantes
 
@@ -120,7 +120,7 @@ function depends_install() {
 
 # Vérification des dépendances
 
-function depends_verify() {
+function lamp_verify() {
 
     # Détection des dépendances
     curl=$(which curl)
@@ -309,7 +309,9 @@ function depends_verify() {
         echo
         echo -e "${light_cyan}[!] Installation de la pile LAMP en cours..${normal}"
         sleep 3
-        depends_install
+        lamp_install
     fi
 
 }
+
+lamp_verify
