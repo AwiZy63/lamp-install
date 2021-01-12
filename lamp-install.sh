@@ -108,7 +108,6 @@ function lamp_install() {
         echo
         echo -e "${light_green}[?] La pile LAMP à bien été installée${normal}"
         sleep 2
-        welcome
     else
         echo
         echo -e "${red}[!] Erreur lors de l'installation de la pile LAMP${normal}"
@@ -302,12 +301,11 @@ function lamp_verify() {
 
     if [ $curl ] && [ -e $apache2 ] && [ $php ] && [ $mariadb ] && [ $phpDepCount == 10 ]; then
         echo
-        echo -e "${light_green}[?] La pile LAMP est déjà installée"
+        echo -e "${light_blue}[?] La pile LAMP est déjà installée"
         sleep 2
-        welcome
     else
         echo
-        echo -e "${light_cyan}[!] Installation de la pile LAMP en cours..${normal}"
+        echo -e "${light_blue}[!] Installation de la pile LAMP en cours..${normal}"
         sleep 3
         lamp_install
     fi
