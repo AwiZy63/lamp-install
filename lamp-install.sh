@@ -108,6 +108,9 @@ function lamp_install() {
         echo
         echo -e "${light_green}[?] La pile LAMP à bien été installée${normal}"
         sleep 2
+	echo
+	echo -e "${light_gray}[?] Pour securiser votre installation MySQL veuillez taper : sudo mysql_secure_installation"
+    	echo
     else
         echo
         echo -e "${red}[!] Erreur lors de l'installation de la pile LAMP${normal}"
